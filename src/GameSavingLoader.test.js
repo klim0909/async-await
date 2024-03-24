@@ -1,4 +1,4 @@
-import GameSavingLoader from './app.js'; // Импортируем класс GameSavingLoader из файла app.js
+import GameSavingLoader from './app.js';
 
 describe('GameSavingLoader', () => {
   test('load', async () => {
