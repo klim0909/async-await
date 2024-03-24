@@ -1,8 +1,7 @@
-const Daemon = require('../characters/daemon');
+import GameSavingLoader from './GameSavingLoader.js';
 
-test('calculateAttackModifier for Daemon class with stoned = true', () => {
-  const daemon = new Daemon(100);
-  daemon.setDistance(2);
-  daemon.stoned = true;
-  expect(daemon.calculateAttackModifier()).toBe(0.95);
+GameSavingLoader.load().then((saving) => {
+  console.log("Saving loaded:", saving);
+}, (error) => {
+  console.error("Error loading saving:", error);
 });
